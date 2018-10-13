@@ -1,0 +1,24 @@
+[class*="g-btn"] {
+	text-align: center;
+	transition: all 0.2s;
+}
+[class*="g-btn"]:active {
+	opacity: 0.75;
+}
+/* 宽高自定义的按钮 */
+.g-btn {
+	font-size: 14px;
+	color: #fff;
+}
+/* 大按钮 */
+.g-btn-orange-l {
+	width: 332px;
+	height: 48px;
+	background: #ffaa22;
+	color: #fff;
+	font-size: 16px;
+	line-height: 48px;
+	text-align: center;
+	border-radius: 2px;
+	font-weight: bold;
+}

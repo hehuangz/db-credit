@@ -1,0 +1,102 @@
+.flex { /*水平方向,项目从左到右排列,不可换行,垂直方向,从上到下*/
+  display:flex;
+  flex-flow: row nowrap;
+}
+.row_column_center {
+  /*水平方向，水平居中，上下居中*/
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.row_between_wrap_column_center {
+  /*水平方向，可换行, 项目垂直居中，项目两端对齐*/
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row_between_nowrap_column_center {
+  /*水平方向，不可换行, 项目垂直居中，项目两端对齐*/
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row_start_column_center { /* 水平方向，项目垂直居中，项目从左到右排列*/
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.row_start_column_center_nowrap { /* 水平方向，项目垂直居中，项目从左到右排列*/
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.row_end_column_center { /* 水平方向，项目垂直居中，项目从右到左排列*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+
+.column_row_center {
+  /* 垂直方向，两端对齐 中间对齐 */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* flex */
+.g-flex {
+  display: flex;
+}
+.g-fw-w {
+  flex-wrap: wrap;
+}
+.g-jc-sa {
+  justify-content: space-around;
+}
+.g-jc-sb {
+  justify-content: space-between;
+}
+.g-jc-fs {
+  justify-content: flex-start;
+}
+.g-jc-fe {
+  justify-content: flex-end;
+}
+.g-jc-c {
+  justify-content: center;
+}
+.g-ai-c {
+  align-items: center;
+}
+.g-ai-fs {
+  align-items: flex-start;
+}
+.g-ai-fe {
+  align-items: flex-end;
+}
+.g-fd-c {
+  flex-direction: column
+}
+.g-fs-0 {
+  flex-shrink: 0;
+}
+.g-full {
+  flex: 0 0 100%;
+}
+.g-1of2 {
+  flex: 0 0 50%;
+}
+.g-1of3 {
+  flex: 0 0 33.3333%;
+}
+.g-1of4 {
+  flex: 0 0 25%;
+}
