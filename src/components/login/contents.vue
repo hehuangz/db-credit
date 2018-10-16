@@ -30,14 +30,21 @@
       </mt-field>
     </div>
     <div class="login g-btn-orange-l" @click="handleLogin">登录</div>
-    <div class="g-fs-14 g-c-999999">登录并同意《用户协议》</div>
+    <div class="g-fs-14 g-c-999999 g-flex g-ai-c">
+      <input 
+        type="checkbox" 
+        v-model="isAllow" 
+        @click="handleCheck" 
+        style="width: 16px;height: 16px"
+      />
+      登录并同意《用户协议》</div>
   </div>  
 </template>
 
 <script>
 import Debounce from '@/util/debounce'
 import { Toast } from 'mint-ui'
-import { getCode } from '@/api/login'
+// import { getCode } from '@/api/login'
 export default {
   name: 'contents',
   props: {
@@ -48,7 +55,8 @@ export default {
       phone: '',
       captcha: '',
       isCaptcha: false, // 是否发送验证码
-      time: 59
+      time: 59,
+      isAllow: true
     }
   },
   methods: {
@@ -71,15 +79,15 @@ export default {
         phone: this.phone,
         smsType: '8805'
       }
-      getCode(params).then(({ data: { code, data, message } }) => {
-        if (code === 1) {
-          console.log(111,'code1')
-        } else {
-          console.log(222,'!code1')          
-        }
-      }).catch(() => {
-        console.log(333, 'catch')
-      })
+      // getCode(params).then(({ data: { code, data, message } }) => {
+      //   if (code === 1) {
+      //     console.log(111,'code1')
+      //   } else {
+      //     console.log(222,'!code1')          
+      //   }
+      // }).catch(() => {
+      //   console.log(333, 'catch')
+      // })
     },
     handleLogin () {
       const rules = {
@@ -123,6 +131,9 @@ export default {
       }
       return true
     },
+    handleCheck () {
+      console.log(11,this.isAllow)
+    }
   }
 }
 </script>

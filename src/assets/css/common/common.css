@@ -4,3 +4,18 @@
 .g-fr {
 	float: right; 
 }
+
+/* 改变checkbox样式 */
+input[type="checkbox"] {
+    -webkit-appearance: none;  /*清除复选框默认样式*/
+    background: url(../../img/checkbox.png) no-repeat; /*复选框的背景图*/
+    vertical-align: middle;
+	background-size: cover;
+	outline: none;
+	margin: 0px;
+	margin-right: 5px;
+}
+input[type="checkbox"]:checked {
+	background: url(../../img/checkbox_checked.png) no-repeat;
+	background-size: cover;	
+}
